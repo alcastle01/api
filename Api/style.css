@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    margin: 30px;
+    background: radial-gradient(circle, rgba(174,238, 174,1))0% rgba(2,140,36,1) 100%;
+}
+#resultado{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

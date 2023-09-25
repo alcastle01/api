@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <h1 class="navbar-brand">Rick and Morty</h1>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div>
+                <div>
+                    <!-- Botones para crear, editar, eliminar y buscar tarjetas -->
+                    <button class="btn btn-primary" onclick="crearTarjeta()">Crear Tarjeta</button>
+                    <button class="btn btn-warning" onclick="editarTarjeta()">Editar Tarjeta</button>
+                    <button class="btn btn-danger" onclick="eliminarTarjeta()">Eliminar Tarjeta</button>
+                    <button class="btn btn-info" onclick="buscarTarjeta()">Buscar Tarjeta</button>
+                  
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h1> Pagina
+        <select name="pagina" id="pagina" onchange="apiRick(this.value)">
+            <script>
+                for (let i = 1; i <= 42; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+    </h1>
+    <div id="resultado">
+
+    </div>
+    <script src="rick.js"> </script>
+</body>
+
+</html>
